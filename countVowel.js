@@ -16,10 +16,24 @@ Et j'ai deux fois vainqueur traversé l'Achéron ;
 Modulant tour à tour sur la lyre d'Orphée
 Les soupirs de la sainte et les cris de la fée.`)
 
-msg = msg.toLowerCase()
+// msg = msg.toLowerCase()
 
-let count = 0
-for (let i = 0; i < msg.length; i++)
-  if (msg[i] === 'a' || msg[i] === 'à' || msg[i] === 'e' || msg[i] === 'ê' || msg[i] === 'è' || msg[i] === 'é' || msg[i] === 'i' || msg[i] === 'o' || msg[i] === 'u' || msg[i] === 'ù' || msg[i] === 'y')
-    count++
-console.log(`Il y a ${count} voyelles dans ce texte`)
+// let count = 0
+// for (let i = 0; i < msg.length; i++)
+//   if (msg[i] === 'a' || msg[i] === 'à' || msg[i] === 'e' || msg[i] === 'ê' || msg[i] === 'è' || msg[i] === 'é' || msg[i] === 'i' || msg[i] === 'o' || msg[i] === 'u' || msg[i] === 'ù' || msg[i] === 'y')
+//     count++
+// console.log(`Il y a ${count} voyelles dans ce texte`)
+
+
+
+
+function compterNbVoyelle(msg) {
+    var nbVoyelle = 0;
+    for (i = 0; i < msg.length; i++) {
+      if (msg[i].toLowerCase() === "a" || msg[i].toLowerCase() === "e" || msg[i].toLowerCase() === "y" || msg[i].toLowerCase() === "u" || msg[i].toLowerCase() === "i" || msg[i].toLowerCase() === "o"); {
+        nbVoyelle++;
+      }
+    }
+    console.log(msg + " contient " + nbVoyelle + " voyelle(s) " + (msg.length - nbVoyelle) + " consonne(s).");
+  }
+  compterNbVoyelle(msg);
